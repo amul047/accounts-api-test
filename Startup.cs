@@ -1,4 +1,5 @@
 ﻿using Accounts.Api.Controllers;
+using Accounts.Api.Middlewares;
 using Accounts.Api.Repositories;
 using Accounts.Api.Repositories.Interfaces;
 using Accounts.Api.Services;
@@ -49,7 +50,7 @@ namespace Accounts.Api
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            app.UseDeveloperExceptionPage();
+            app.UseMiddleware<ExceptionMiddleware>();
 
             app.UseMvc();
 
