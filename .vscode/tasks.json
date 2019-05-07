@@ -10,27 +10,6 @@
                 "${workspaceFolder}/accounts-api-test.csproj"
             ],
             "problemMatcher": "$tsc"
-        },
-        {
-            "label": "publish",
-            "command": "dotnet",
-            "type": "process",
-            "args": [
-                "publish",
-                "${workspaceFolder}/accounts-api-test.csproj"
-            ],
-            "problemMatcher": "$tsc"
-        },
-        {
-            "label": "watch",
-            "command": "dotnet",
-            "type": "process",
-            "args": [
-                "watch",
-                "run",
-                "${workspaceFolder}/accounts-api-test.csproj"
-            ],
-            "problemMatcher": "$tsc"
         }
     ]
 }

@@ -1,0 +1,10 @@
+{
+  "mssql.connections": [
+    {
+      "server": "(localdb)\\mssqllocaldb",
+      "database": "",
+      "authenticationType": "Integrated",
+      "profileName": "accounts-api-test"
+    }
+  ],
+}
