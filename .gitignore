@@ -3,3 +3,5 @@ obj/
 .idea/
 
 *.user
+.vs/
+Properties/launchSettings.json

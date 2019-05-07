@@ -9,5 +9,7 @@ namespace Accounts.Api.Controllers.ViewModels
         public string OrganisationalUnit { get; set; }
 
         public IEnumerable<ContactEditVm> Contacts { get; set; }
+
+        public string InvoiceMedium { get; set; }
     }
 }

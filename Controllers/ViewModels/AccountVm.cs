@@ -11,5 +11,7 @@ namespace Accounts.Api.Controllers.ViewModels
         public IEnumerable<ContactVm> Contacts { get; set; }
 
         public string OrganisationalUnit { get; set; }
+
+        public string InvoiceMedium { get; set; }
     }
 }

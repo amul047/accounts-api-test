@@ -13,6 +13,7 @@ namespace Accounts.Api.Entities
         public int OrganisationalUnitId { get; set; }
 
         public OrganisationalUnit OrganisationalUnit { get; set; }
-        
+
+        public string InvoiceMedium { get; set; }
     }
 }

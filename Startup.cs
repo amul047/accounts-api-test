@@ -12,6 +12,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Swashbuckle.AspNetCore.Swagger;
+using Swashbuckle.AspNetCore.SwaggerUI;
 
 namespace Accounts.Api
 {
@@ -32,7 +34,7 @@ namespace Accounts.Api
             services.AddValidatorsFromAssembly(typeof(AccountValidator).Assembly);
 
             services.AddAutoMapper(typeof(AccountMappingProfile).Assembly);
-            
+
             services.AddDbContext<AccountsDbContext>(builder =>
                 builder.UseSqlServer(
                     "Data Source=(localdb)\\mssqllocaldb; Initial Catalog=Accounts; Integrated Security=true"));
@@ -40,14 +42,20 @@ namespace Accounts.Api
             services.AddScoped<IAccountsService, AccountsService>();
             services.AddScoped<IContactService, ContactService>();
             services.AddScoped<IAccountsRepository, AccountsRepository>();
+
+            services.AddSwaggerGen(c => { c.SwaggerDoc("v1", new Info {Title = "Accounts API Test", Version = "v1"}); });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             app.UseDeveloperExceptionPage();
-            
+
             app.UseMvc();
+
+            app.UseSwagger();
+
+            app.UseSwaggerUI(c => { c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1"); });
         }
     }
 }

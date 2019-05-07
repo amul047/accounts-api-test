@@ -7,10 +7,15 @@ DROP DATABASE Accounts;
 GO
 */
 
-USE [master];
-GO
-CREATE DATABASE Accounts;
-GO
+--USE [master];
+--GO
+--CREATE DATABASE Accounts;
+--GO
+--DROP TABLE dbo.Contacts;
+--DROP TABLE dbo.Accounts;
+--DROP TABLE dbo.Roles;
+--DROP TABLE dbo.OrganisationalUnits;
+
 USE Accounts;
 GO
 
@@ -28,7 +33,8 @@ CREATE TABLE dbo.OrganisationalUnits (
 CREATE TABLE dbo.Accounts (
   AccountId INT IDENTITY NOT NULL PRIMARY KEY,
   OrganisationalUnitId INT NOT NULL REFERENCES dbo.OrganisationalUnits (OrganisationalUnitId),
-  [Name] VARCHAR(100) NOT NULL
+  [Name] VARCHAR(100) NOT NULL,
+  [InvoiceMedium] VARCHAR(10) NOT NULL,
 );
 
 CREATE TABLE dbo.Contacts (
@@ -62,9 +68,9 @@ SET IDENTITY_INSERT dbo.OrganisationalUnits OFF;
 
 SET IDENTITY_INSERT dbo.Accounts ON;
 INSERT INTO dbo.Accounts
-  (Accountid, OrganisationalUnitId, [Name])
+  (Accountid, OrganisationalUnitId, [Name], InvoiceMedium)
 VALUES
-( 1, 2, 'Apple Inc.');
+( 1, 2, 'Apple Inc.', 'Email');
 SET IDENTITY_INSERT dbo.Accounts OFF;
 
 

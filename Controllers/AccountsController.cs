@@ -50,6 +50,7 @@ namespace Accounts.Api.Controllers
                 Name = accountEditVm?.Name,
                 OrganisationalUnit = _accountsService.GetOrganisationalUnitByName(accountEditVm?.OrganisationalUnit),
                 Contacts = new List<Contact>(),
+                InvoiceMedium = accountEditVm?.InvoiceMedium
             };
 
             if (accountEditVm?.Contacts != null)
