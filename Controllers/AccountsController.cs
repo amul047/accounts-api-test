@@ -43,6 +43,13 @@ namespace Accounts.Api.Controllers
         }
 
 
+        [HttpPut]
+        [Route("{accountId}/InvoiceMedium")]
+        public void CreateAccount([FromRoute] int accountId, [FromBody] InvoiceMediumEditVm invoiceMediumEditVm)
+        {
+            _accountsService.SaveInvoiceMediumForAccount(accountId, invoiceMediumEditVm.InvoiceMedium);
+        }
+
         private Account MapAccount(AccountEditVm accountEditVm)
         {
             var account = new Account

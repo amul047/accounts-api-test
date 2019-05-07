@@ -10,7 +10,9 @@ namespace Accounts.Api.Repositories.Interfaces
         IQueryable<OrganisationalUnit> OrganisationalUnits { get; }
 
         IQueryable<Role> Roles { get; }
-        
+
         void Create<TEntity>(TEntity entity) where TEntity : class;
+
+        void Save<TEntity>(TEntity entity) where TEntity : class;
     }
 }

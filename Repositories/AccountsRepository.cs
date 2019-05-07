@@ -28,5 +28,10 @@ namespace Accounts.Api.Repositories
             _db.Add(entity);
             _db.SaveChanges();
         }
+
+        public void Save<TEntity>(TEntity entity) where TEntity : class
+        {
+            _db.SaveChanges();
+        }
     }
 }

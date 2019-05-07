@@ -29,6 +29,24 @@ namespace Accounts.Api.Services
             _accountsRepository.Create(account);
         }
 
+        public void SaveInvoiceMediumForAccount(int accountId, string invoiceMedium)
+        {
+            var account = _accountsRepository.Accounts.SingleOrDefault(a => a.AccountId == accountId);
+
+            if (account == null)
+            {
+                throw new ValidationException("Account Id is invalid");
+            }
+
+            account.InvoiceMedium = invoiceMedium;
+            _accountsRepository.Save(account);
+        }
+
+        public void SaveAccount(Account account)
+        {
+            _accountsRepository.Save(account);
+        }
+
         public OrganisationalUnit GetOrganisationalUnitByName(string name)
         {
             return _accountsRepository.OrganisationalUnits.SingleOrDefault(ou => ou.Name == name);

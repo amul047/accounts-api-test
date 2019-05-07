@@ -8,6 +8,8 @@ namespace Accounts.Api.Services.Interfaces
 
         void CreateAccount(Account account);
 
+        void SaveInvoiceMediumForAccount(int accountId, string invoiceMedium);
+
         OrganisationalUnit GetOrganisationalUnitByName(string name);
     }
 }
