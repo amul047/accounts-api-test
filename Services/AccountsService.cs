@@ -42,11 +42,6 @@ namespace Accounts.Api.Services
             _accountsRepository.Save(account);
         }
 
-        public void SaveAccount(Account account)
-        {
-            _accountsRepository.Save(account);
-        }
-
         public OrganisationalUnit GetOrganisationalUnitByName(string name)
         {
             return _accountsRepository.OrganisationalUnits.SingleOrDefault(ou => ou.Name == name);
