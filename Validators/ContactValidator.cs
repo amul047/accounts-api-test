@@ -12,7 +12,7 @@ namespace Accounts.Api.Validators
             RuleFor(c => c.LastName).MaximumLength(200).NotEmpty();
             RuleFor(c => c.PhoneNumber).MaximumLength(15);
             RuleFor(c => c.MobileNumber).MaximumLength(15);
-            RuleFor(c => c.EmailAddress).MaximumLength(250).NotEmpty().EmailAddress();
+            RuleFor(c => c.EmailAddress).MaximumLength(250);
             RuleFor(c => c.Role).NotNull();
         }
     }
