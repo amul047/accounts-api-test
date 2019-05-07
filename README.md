@@ -9,6 +9,7 @@ It might be used for our website or mobile app to allow staff to create new acco
 
 * Visual Studio Code (or your favourite editor)
   * Sql Server (mssql) extension
+  * C# extension
 * dotnetcore sdk 2.2
 * SQL LocalDB
 * HTTPie, Postman, or similar for testing
