@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\michael.wildman.VOCUS\.Rider2019.1\config\consoles\db" t="IncludeRecursive" />
+    <e p="C:\Users\michael.wildman.VOCUS\.Rider2019.1\config\extensions" t="IncludeRecursive" />
+    <e p="C:\Users\michael.wildman.VOCUS\.Rider2019.1\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\michael.wildman.VOCUS\.Rider2019.1\system\resharper-host\local\Transient\ReSharperHost\v191\SolutionCaches\_.19.00" t="ExcludeRecursive" />
+    <e p="C:\Users\michael.wildman.VOCUS\src\git.t3.nz\it\accounts-api-test" t="IncludeRecursive">
+      <e p=".git\info\exclude" t="IncludeRecursive" />
+      <e p=".gitignore" t="Include" />
+      <e p="accounts-api-test.csproj" t="IncludeRecursive" />
+      <e p="appsettings.json" t="Include" />
+      <e p="bin" t="ExcludeRecursive" />
+      <e p="Controllers" t="Include">
+        <e p="AccountsController.cs" t="Include" />
+        <e p="MappingProfiles" t="Include">
+          <e p="AccountMappingProfile.cs" t="Include" />
+          <e p="ContactMappingProfile.cs" t="Include" />
+        </e>
+        <e p="ViewModels" t="Include">
+          <e p="AccountVm.cs" t="Include" />
+          <e p="ContactVm.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Entities" t="Include">
+        <e p="Account.cs" t="Include" />
+        <e p="Contact.cs" t="Include" />
+        <e p="OrganisationalUnit.cs" t="Include" />
+        <e p="Role.cs" t="Include" />
+      </e>
+      <e p="obj" t="ExcludeRecursive">
+        <e p="Debug" t="Include">
+          <e p="netcoreapp2.2" t="Include">
+            <e p="accounts-api-test.AssemblyInfo.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Program.cs" t="Include" />
+      <e p="Repositories" t="Include">
+        <e p="AccountsDbContext.cs" t="Include" />
+        <e p="AccountsRepository.cs" t="Include" />
+      </e>
+      <e p="Repositories.Interfaces" t="Include">
+        <e p="IAccountsRepository.cs" t="Include" />
+      </e>
+      <e p="Services" t="Include">
+        <e p="AccountsService.cs" t="Include" />
+      </e>
+      <e p="Services.Interfaces" t="Include">
+        <e p="IAccountsService.cs" t="Include" />
+      </e>
+      <e p="Startup.cs" t="Include" />
+      <e p="Validators" t="Include">
+        <e p="AccountValidator.cs" t="Include" />
+        <e p="ContactValidator.cs" t="Include" />
+      </e>
+    </e>
+  </component>
+</project>
