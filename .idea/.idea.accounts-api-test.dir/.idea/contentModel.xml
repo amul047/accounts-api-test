@@ -18,7 +18,10 @@
           <e p="ContactMappingProfile.cs" t="Include" />
         </e>
         <e p="ViewModels" t="Include">
+          <e p="AccountCreatedVm.cs" t="Include" />
+          <e p="AccountEditVm.cs" t="Include" />
           <e p="AccountVm.cs" t="Include" />
+          <e p="ContactEditVm.cs" t="Include" />
           <e p="ContactVm.cs" t="Include" />
         </e>
       </e>
@@ -46,9 +49,11 @@
       </e>
       <e p="Services" t="Include">
         <e p="AccountsService.cs" t="Include" />
+        <e p="ContactService.cs" t="Include" />
       </e>
       <e p="Services.Interfaces" t="Include">
         <e p="IAccountsService.cs" t="Include" />
+        <e p="IContactService.cs" t="Include" />
       </e>
       <e p="Startup.cs" t="Include" />
       <e p="Validators" t="Include">

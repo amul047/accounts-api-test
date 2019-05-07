@@ -18,10 +18,15 @@ namespace Accounts.Api.Repositories
             .Include(a => a.OrganisationalUnit)
             .Include(a => a.Contacts)
                 .ThenInclude(c => c.Role);
-        
+
+        public IQueryable<OrganisationalUnit> OrganisationalUnits => _db.OrganisationalUnits;
+
+        public IQueryable<Role> Roles => _db.Roles;
+
         public void Create<TEntity>(TEntity entity) where TEntity : class
         {
             _db.Add(entity);
+            _db.SaveChanges();
         }
     }
 }

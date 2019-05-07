@@ -10,6 +10,10 @@ namespace Accounts.Api.Repositories
         }
 
         public DbSet<Account> Accounts { get; set; }
+        
+        public DbSet<OrganisationalUnit> OrganisationalUnits { get; set; }
+        
+        public DbSet<Role> Roles { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

@@ -7,5 +7,7 @@ namespace Accounts.Api.Services.Interfaces
         Account GetAccountById(int accountId);
 
         void CreateAccount(Account account);
+
+        OrganisationalUnit GetOrganisationalUnitByName(string name);
     }
 }

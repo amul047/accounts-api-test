@@ -28,5 +28,10 @@ namespace Accounts.Api.Services
     
             _accountsRepository.Create(account);
         }
+
+        public OrganisationalUnit GetOrganisationalUnitByName(string name)
+        {
+            return _accountsRepository.OrganisationalUnits.SingleOrDefault(ou => ou.Name == name);
+        }
     }
 }
